@@ -1,0 +1,8 @@
+############################################################################
+# apps/myprojects/modules/param/Make.defs
+############################################################################
+
+ifneq ($(CONFIG_MYPROJECTS_MODULES_PARAM),)
+CONFIGURED_APPS += $(APPDIR)/myprojects/modules/param
+endif
+

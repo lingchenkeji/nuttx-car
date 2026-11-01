@@ -1,0 +1,24 @@
+#
+# VTX316 Voice Synthesis Module Configuration
+#
+
+config MYPROJECTS_MODULES_VTX
+	bool "VTX316 Voice Synthesis Module"
+	default n
+	depends on STM32_USART1
+	---help---
+		Enable the VTX316 Chinese voice synthesis module.
+
+		This module provides TTS (Text-to-Speech) functionality using the
+		VTX316 voice synthesis chip via UART interface (USART1).
+
+if MYPROJECTS_MODULES_VTX
+
+config MYPROJECTS_MODULES_VTX_NSH
+	bool "VTX316 NSH Command"
+	default y
+	depends on NSH_LIBRARY
+	---help---
+		Enable the VTX NSH command for testing and debugging.
+
+endif # MYPROJECTS_MODULES_VTX

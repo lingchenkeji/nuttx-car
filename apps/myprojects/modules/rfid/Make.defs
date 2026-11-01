@@ -1,0 +1,12 @@
+############################################################################
+# apps/myprojects/modules/rfid/Make.defs
+#
+# RFID Module Make.defs
+#
+############################################################################
+
+# Add RFID module to CONFIGURED_APPS for registration (if NSH command is enabled)
+
+ifneq ($(CONFIG_MYPROJECTS_MODULES_RFID_NSH),)
+CONFIGURED_APPS += $(APPDIR)/myprojects/modules/rfid
+endif

@@ -1,0 +1,13 @@
+############################################################################
+# apps/myprojects/modules/Make.defs
+############################################################################
+
+# Add your module Make.defs includes here
+
+include $(APPDIR)/myprojects/modules/rfid/Make.defs
+include $(APPDIR)/myprojects/modules/vtx/Make.defs
+include $(APPDIR)/myprojects/modules/motor_drv/Make.defs
+include $(APPDIR)/myprojects/modules/func_led/Make.defs
+include $(APPDIR)/myprojects/modules/param/Make.defs
+include $(APPDIR)/myprojects/modules/cdc_svc/Make.defs
+include $(APPDIR)/myprojects/modules/waypoint/Make.defs

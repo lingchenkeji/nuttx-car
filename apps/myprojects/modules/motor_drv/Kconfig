@@ -1,0 +1,24 @@
+#
+# DRV8212 Motor Driver Module Configuration
+#
+
+config MYPROJECTS_MODULES_MOTOR_DRV
+	bool "Motor Driver Module (DRV8212)"
+	default n
+	depends on ARCH_CHIP_STM32
+	---help---
+		Enable the DRV8212 motor driver module.
+
+		This module provides basic forward/reverse/brake/coast control
+		for a DC motor via DRV8212 H-bridge pins.
+
+if MYPROJECTS_MODULES_MOTOR_DRV
+
+config MYPROJECTS_MODULES_MOTOR_DRV_NSH
+	bool "DRV8212 NSH Command"
+	default y
+	depends on NSH_LIBRARY
+	---help---
+		Enable the DRV8212 NSH command for testing and debugging.
+
+endif # MYPROJECTS_MODULES_MOTOR_DRV

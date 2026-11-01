@@ -1,0 +1,8 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+# Projects directory - each project has its own configuration
+#
+
+source "$APPSDIR/myprojects/projects/project1/Kconfig"

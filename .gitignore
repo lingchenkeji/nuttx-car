@@ -1,0 +1,49 @@
+# NuttX 构建产物
+nuttx/nuttx
+nuttx/nuttx.bin
+nuttx/nuttx.hex
+nuttx/nuttx.map
+nuttx/nuttx.manifest
+nuttx/.config
+nuttx/.config.old
+nuttx/Make.defs
+nuttx/.version
+nuttx/include/arch
+nuttx/include/arch/board
+nuttx/include/arch/chip
+nuttx/include/nuttx/config.h
+nuttx/include/nuttx/version.h
+nuttx/arch/arm/src/chip
+nuttx/arch/arm/src/board
+nuttx/arch/arm/src/board/board
+nuttx/arch/dummy/
+nuttx/boards/dummy/
+nuttx/drivers/platform
+
+# Apps 构建产物
+apps/platform/board
+apps/libapps.a
+apps/builtin/builtin_list.c
+apps/builtin/builtin_proto.h
+
+# 编译中间文件
+*.o
+*.a
+*.d
+*.ddc
+*.ddh
+*.src
+*.lst
+*.bin.tmp
+*.ld.tmp
+
+# IDE 和编辑器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+Thumbs.db

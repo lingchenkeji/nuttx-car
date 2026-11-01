@@ -1,0 +1,15 @@
+#
+# For a description of the syntax of this configuration file,
+# see the file kconfig-language.txt in the NuttX tools repository.
+#
+
+# Modules Kconfig - Add your modules here
+
+source "$APPSDIR/myprojects/modules/rfid/Kconfig"
+source "$APPSDIR/myprojects/modules/vtx/Kconfig"
+source "$APPSDIR/myprojects/modules/motor_drv/Kconfig"
+source "$APPSDIR/myprojects/modules/func_led/Kconfig"
+source "$APPSDIR/myprojects/modules/param/Kconfig"
+source "$APPSDIR/myprojects/modules/cdc_svc/Kconfig"
+source "$APPSDIR/myprojects/modules/ws2812/Kconfig"
+source "$APPSDIR/myprojects/modules/waypoint/Kconfig"

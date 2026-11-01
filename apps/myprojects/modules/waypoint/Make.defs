@@ -1,0 +1,7 @@
+############################################################################
+# apps/myprojects/modules/waypoint/Make.defs
+############################################################################
+
+ifneq ($(CONFIG_MYPROJECTS_MODULES_WAYPOINT),)
+CONFIGURED_APPS += $(APPDIR)/myprojects/modules/waypoint
+endif

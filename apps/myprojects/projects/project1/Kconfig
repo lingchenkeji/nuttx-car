@@ -1,0 +1,33 @@
+#
+# Project 1 Configuration
+#
+# This is the main configuration for Project 1.
+# Architecture:
+#   - Bootloader: Bare-metal USB DFU (separate project)
+#   - Application: NuttX with USB CDC-ACM
+#
+
+menuconfig MYPROJECTS_PROJECT1
+	bool "Project 1"
+	default n
+	---help---
+		Enable Project 1 configuration.
+		
+		This project uses a two-firmware architecture:
+		- Bootloader (bare-metal): USB DFU for firmware upgrade
+		- Application (NuttX): USB CDC-ACM for debug console
+
+if MYPROJECTS_PROJECT1
+
+config MYPROJECTS_PROJECT1_APP
+	bool "Project 1 Main Application"
+	default y
+	depends on NSH_LIBRARY
+	---help---
+		Enable the project1 NSH command that coordinates all modules:
+		DRV8212 motor, MFRC522 RFID, VTX316 voice TTS, functional LED.
+		
+		On boot, the application initializes all hardware, starts the
+		motor, and begins continuous RFID polling with voice announcements.
+
+endif # MYPROJECTS_PROJECT1

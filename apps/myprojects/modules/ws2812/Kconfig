@@ -1,0 +1,24 @@
+#
+# WS2812B RGB LED Module Configuration
+#
+
+config MYPROJECTS_MODULES_WS2812
+	bool "WS2812B RGB LED Module"
+	default n
+	depends on ARCH_CHIP_STM32
+	---help---
+		Enable the WS2812B RGB LED driver module.
+
+		This module provides bit-banging control for WS2812B
+		addressable RGB LEDs via GPIO.
+
+if MYPROJECTS_MODULES_WS2812
+
+config MYPROJECTS_MODULES_WS2812_NSH
+	bool "WS2812 NSH Command"
+	default n
+	depends on NSH_LIBRARY
+	---help---
+		Enable the WS2812 NSH command for testing and debugging.
+
+endif # MYPROJECTS_MODULES_WS2812

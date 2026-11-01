@@ -1,0 +1,9 @@
+############################################################################
+# apps/myprojects/Make.defs
+#
+# My Projects - Modular Application Framework
+#
+############################################################################
+
+include $(APPDIR)/myprojects/modules/Make.defs
+include $(APPDIR)/myprojects/projects/Make.defs

@@ -1,0 +1,12 @@
+############################################################################
+# apps/myprojects/modules/motor_drv/Make.defs
+#
+# DRV8212 Motor Driver Module Make.defs
+#
+############################################################################
+
+# Add motor driver module to CONFIGURED_APPS for registration
+
+ifneq ($(CONFIG_MYPROJECTS_MODULES_MOTOR_DRV_NSH),)
+CONFIGURED_APPS += $(APPDIR)/myprojects/modules/motor_drv
+endif

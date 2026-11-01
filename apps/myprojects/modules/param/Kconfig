@@ -1,0 +1,11 @@
+#
+# Parameter persistence module
+#
+
+config MYPROJECTS_MODULES_PARAM
+  bool "Parameter Module (Flash persistent)"
+  default y
+  depends on ARCH_HAVE_PROGMEM
+  ---help---
+    Enable persistent parameter storage in internal flash.
+

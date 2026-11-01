@@ -1,0 +1,12 @@
+############################################################################
+# apps/myprojects/modules/vtx/Make.defs
+#
+# VTX316 Voice Synthesis Module Make.defs
+#
+############################################################################
+
+# Add VTX module to CONFIGURED_APPS for registration (if NSH command is enabled)
+
+ifneq ($(CONFIG_MYPROJECTS_MODULES_VTX_NSH),)
+CONFIGURED_APPS += $(APPDIR)/myprojects/modules/vtx
+endif

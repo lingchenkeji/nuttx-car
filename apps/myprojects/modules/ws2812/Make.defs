@@ -1,0 +1,7 @@
+############################################################################
+# apps/myprojects/modules/ws2812/Make.defs
+############################################################################
+
+ifneq ($(CONFIG_MYPROJECTS_MODULES_WS2812),)
+CONFIGURED_APPS += $(APPDIR)/myprojects/modules/ws2812
+endif

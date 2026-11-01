@@ -1,0 +1,10 @@
+############################################################################
+# apps/myprojects/projects/project1/Make.defs
+#
+# Project 1 Make.defs
+#
+############################################################################
+
+ifneq ($(CONFIG_MYPROJECTS_PROJECT1_APP),)
+CONFIGURED_APPS += $(APPDIR)/myprojects/projects/project1
+endif

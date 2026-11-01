@@ -1,0 +1,22 @@
+#
+# CDC JSON service module
+#
+
+config MYPROJECTS_MODULES_CDC_SVC
+  bool "CDC JSON Service Module"
+  default y
+  depends on MYPROJECTS_MODULES_PARAM
+  ---help---
+    Enable JSON command service used by host over CDC-ACM.
+
+if MYPROJECTS_MODULES_CDC_SVC
+
+config MYPROJECTS_MODULES_CDC_SVC_NSH
+  bool "CDC JSON NSH command (p1ctl)"
+  default y
+  depends on NSH_LIBRARY
+  ---help---
+    Enable p1ctl command to send one JSON request and print one JSON response.
+
+endif # MYPROJECTS_MODULES_CDC_SVC
+

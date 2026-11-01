@@ -1,0 +1,26 @@
+#
+# Functional LED Module Configuration
+#
+
+config MYPROJECTS_MODULES_FUNC_LED
+	bool "Functional LED Module"
+	default n
+	depends on ARCH_CHIP_STM32
+	---help---
+		Enable the functional LED driver module.
+
+		This module controls an external 5V LED driven by S8050 NPN
+		transistor via GPIO (active-high). Provides on/off/toggle/blink
+		and timed-on functionality for integration with other modules
+		(e.g. RFID notification).
+
+if MYPROJECTS_MODULES_FUNC_LED
+
+config MYPROJECTS_MODULES_FUNC_LED_NSH
+	bool "Functional LED NSH Command"
+	default y
+	depends on NSH_LIBRARY
+	---help---
+		Enable the func_led NSH command for testing and debugging.
+
+endif # MYPROJECTS_MODULES_FUNC_LED

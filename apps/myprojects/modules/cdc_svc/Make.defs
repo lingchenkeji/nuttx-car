@@ -1,0 +1,8 @@
+############################################################################
+# apps/myprojects/modules/cdc_svc/Make.defs
+############################################################################
+
+ifneq ($(CONFIG_MYPROJECTS_MODULES_CDC_SVC),)
+CONFIGURED_APPS += $(APPDIR)/myprojects/modules/cdc_svc
+endif
+

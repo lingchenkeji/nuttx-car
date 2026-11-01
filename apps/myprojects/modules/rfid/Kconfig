@@ -1,0 +1,43 @@
+#
+# RFID Module Configuration
+#
+
+config MYPROJECTS_MODULES_RFID
+	bool "RFID Module"
+	default n
+	depends on SPI
+	---help---
+		Enable the RFID module for contactless card reading.
+
+		This module provides RFID card reading functionality using
+		ISO/IEC 14443 Type A compatible reader ICs via SPI interface.
+
+if MYPROJECTS_MODULES_RFID
+
+choice
+	prompt "RFID Chip Selection"
+	default MYPROJECTS_MODULES_RFID_CV520
+
+config MYPROJECTS_MODULES_RFID_MFRC522
+	bool "MFRC522/MFRC522B"
+	---help---
+		Use NXP MFRC522 or MFRC522B reader IC.
+
+config MYPROJECTS_MODULES_RFID_CV520
+	bool "CV520"
+	---help---
+		Use CV520 contactless reader IC.
+		CV520 is register-compatible with MFRC522 and supports
+		ISO/IEC 14443 Type A and MIFARE protocols via SPI.
+		Supports up to 848kbit/s data transfer rate.
+
+endchoice
+
+config MYPROJECTS_MODULES_RFID_NSH
+	bool "RFID NSH Command"
+	default y
+	depends on NSH_LIBRARY
+	---help---
+		Enable the RFID NSH command for testing and debugging.
+
+endif # MYPROJECTS_MODULES_RFID

@@ -1,0 +1,12 @@
+#
+# Waypoint (point-of-interest) module
+#
+
+config MYPROJECTS_MODULES_WAYPOINT
+  bool "Waypoint Module (per-point LED/announce/speed)"
+  default y
+  depends on ARCH_HAVE_PROGMEM
+  ---help---
+    Enable the waypoint table: match RFID card content against up to 40
+    configurable points and apply per-point LED, announce and speed
+    actions.  The table is stored in dedicated flash pages.
