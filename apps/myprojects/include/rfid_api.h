@@ -27,7 +27,7 @@
  *   rfid_authenticate_block  认证要读的那一块。主程序用的是 Key A
  *   rfid_read_block          读出 16 字节。播报和点位匹配都用这 16 字节
  *   rfid_stop_crypto         结束这次加密会话
- *   rfid_halt                让卡休眠。不做这一步，它下一轮常不再应答唤醒
+ *   rfid_halt                让卡进入休眠，之后只响应下一次唤醒
  *   rfid_cleanup             清芯片内部状态，不清天线场
  *
  * 寄存器细节在 modules/rfid/cv520_api.c，业务封装在 rfid_api.c。
